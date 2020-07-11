@@ -1,0 +1,46 @@
+extends ../pug/layout-content.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block nav
+  +main-nav('10')
+
+block sidebar
+    +field-checkbox([
+      {
+        title: 'Чекбокс ошибочный',
+        attrs: {
+          name: 'check1',
+          checked: true,
+        }
+      },
+      {
+        title: 'Чекбокс блокирован',
+        attrs: {
+          name: 'check2',
+        }
+      },
+    ], 'Общее необязательное название')
+
+
+block content
+  .room
+    a.room__link(href='') выбор
+
+  h1 Заголовок
+  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
+  p.
+      #[+btn('Кнопка-ссылка')(href='/')]
+      #[+btn('Кнопка-input', '', true)(name='submit')]
+      #[+btn('Кнопка-button', 'second')]
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

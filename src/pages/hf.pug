@@ -1,0 +1,52 @@
+extends ../pug/layout-UI.pug
+
+block meta
+  title HF
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+    .ui_mainmenu-wrapper
+        +logo('/')
+            img(src='img/logo.svg', alt='Logo', width='106', height='40')
+        +main-nav('0')
+        p.
+            #[+btn('ВОЙТИ')(href='/')]
+            #[+btn('ЗАРЕГИСТРИРОВАТЬСЯ')(href='/')]
+    .ui_usermenu-wrapper
+        +logo('/')
+            img(src='img/logo.svg', alt='Logo', width='106', height='40')
+        +main-nav('0')
+        p.
+            Юлий Цезарь
+    .ui_footerw
+        +logo('/')
+            img(src='img/logo.svg', alt='Logo', width='106', height='40')
+        p.
+            Бронирование номеров в лучшем<br>
+            отеле 2019 года по версии<br>
+            ассоциации «Отельные взгляды»
+    ul  
+        li НАВИГАЦИЯ
+            ul
+                li О нас
+                li Новости
+                li Служба поддержки
+                li Услуги
+        li О НАС
+            ul
+                li О сервисе
+                li Наша  команда
+                li Вакансии
+                li Инвесторы
+        li СЛУЖБА ПОДДЕРЖКИ
+            ul
+                li Соглашения
+                li Сообщества
+                li Связь с нами
+                
+        li ПОДПИСКА
+            
